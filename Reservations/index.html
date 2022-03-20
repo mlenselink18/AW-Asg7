@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reservations</title>
+    <link rel="stylesheet" href="../styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+        });
+    </script>
+    <link href="../styles/reservations.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<header>
+    <h1>Reservation Request</h1>
+</header>
+<nav id="mobile_menu"></nav>
+<nav id="nav_menu">
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Profile14/index.html">Profile-14</a></li>
+        <li><a href="../Reservations/index.html">Reservations</a></li>
+    </ul>
+</nav>
+<br>
+<body>
+    <main> 
+        <form action="reservation.html" name="reservationForm" id="reservationForm" method="GET">
+            <div id="tabs">
+                <ul>
+                <li><a href="#tabs-1">Gerneal Information</a></li>
+                <li><a href="#tabs-2">Preferences</a></li>
+                <li><a href="#tabs-3">Contact Information</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <table>
+                        <tr>
+                            <td class="label">
+                                <label for="ArrivalDate">Arrival Date : </label>
+                            </td>
+                            <td>
+                                <input type="text" name="ArrivalDate" id="ArrivalDate" readonly>
+                                <span class="req">*</span>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                <label for="Nights">Nights : </label>
+                            </td>
+                            <td class="input">
+                                <input type="text" name="Nights" id="Nights" required>
+                                <span class="req">*</span>
+                                <br>
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                <label for="selectAdults">Adults : </label>
+                            </td>
+                            <td class="input">
+                                <select name="selectAdults" id="selectAdults"></select>
+                                <span class="req"></span>
+                                <br>
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                <label for="selectChildren">Children : </label>
+                            </td>
+                            <td class="input">
+                                <select name="selectChildren" id="selectChildren"></select>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="tabs-2">
+                    <table>
+                        <tr>
+                            <td class="label">
+                                <label for="RoomType">Room Type: </label>
+                            </td>
+                            <td class="input">
+                                <input type="radio" id="Standard" name="RoomType" value="Standard">
+                                <label for="Standard">Standard</label>
+                                <input type="radio" id="Business" name="RoomType" value="Business">
+                                <label for="Business">Business</label>
+                                <input type="radio" id="Suite" name="RoomType" value="Suite">
+                                <label for="Suite">Suite</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                <label for="BedType">Bed Type: </label>
+                            </td>
+                            <td class="input">
+                                <input type="radio" id="King" name="BedType" value="King">
+                                <label for="King">King</label>
+                                <input type="radio" id="Queen" name="BedType" value="Queen">
+                                <label for="Queen">Queen</label>
+                                <input type="radio" id="Double" name="BedType" value="Double">
+                                <label for="Double">Double</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                <label for="cbEarlyIn">Early Check-In: </label>
+                            </td>
+                            <td class="input">
+                                <input type="checkbox" id="cbEarlyIn">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="tabs-3">
+                    <table>
+                        <tr>
+                            <td class="label">
+                                <label for="Name">Name: </label>
+                            </td>
+                            <td class="input">
+                                <input type="text" name="Name" id="Name" maxlength="150" required>
+                                <span class="req">*</span>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                <span for="Email">Email: </span>
+                            </td>
+                            <td class="input">
+                                <input type="text" name="Email" id="Email" maxlength="150" required>
+                                <span class="req">*</span>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                <label for="Phone">Phone: </label>
+                            </td>
+                            <td class="input">
+                                <input type="text" name="Phone" id="Phone" placeholder="999-999-9999" maxlength="12" required>
+                                <span class="req">*</span>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="input">
+                <input type="button" id="buttonPolicies" value="View Cancellation Policies">
+                <input type="submit" id="buttonSubmit" value="Submit Request">
+            </div>
+        </form>
+        <div id="dialog" class="dialog" title="Cancellation Policies">
+            <p>
+                Notification of cancellation or arrival date change must be received more than three days (72 hours)
+                prior to the confirmed arrival date for the reservation deposit to be refundable. Email notification is 
+                acceptable, and a cancellation confirmation will be send to you. Failure to check-in on the scheduled
+                arrival date will result in  the cancellation of the reservation any remaining nights, and the reservation 
+                deposit shall be forfeited.
+            </p>
+        </div>
+    </main>
+    <script src="Reservations.js"></script>
+</body>
+</html>

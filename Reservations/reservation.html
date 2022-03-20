@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reservations</title>
+    <link rel="stylesheet" href="../styles/slicknav.css">
+    <link href="../styles/reservations.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<header>
+    <h1>Reservation Request</h1>
+</header>
+<nav id="mobile_menu"></nav>
+<nav id="nav_menu">
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Profile14/index.html">Profile-14</a></li>
+        <li><a href="../Reservations/index.html">Reservations</a></li>
+    </ul>
+</nav>
+<br>
+<body>
+    <main> 
+        <form action="index.html"  method="GET">
+            <Fieldset>
+                <legend>Customer Information</legend>
+                <label for="outName">Name: </label>
+                <span id="outName" ></span>
+                <br>
+                <label for="outEmail">Email: </label>
+                <span id="outEmail" ></span>
+                <br>
+                <label for="outPhone">Phone: </label>
+                <span id="outPhone" ></span>
+                <br>
+            </Fieldset>
+            <Fieldset>
+                <legend>Reservation Information</legend>
+                <label for="outArrival">Arrival Date: </label>
+                <span id="outArrival" ></span>
+                <br>
+                <label for="outNights">Nights: </label>
+                <span id="outNights" ></span>
+                <br>
+                <label for="outAdults">Adults: </label>
+                <span id="outAdults" ></span>
+                <br>
+                <label for="outChildren">Children: </label>
+                <span id="outChildren" ></span>
+                <br>
+                <label for="roomType">Room Type: </label>
+                <span id="roomType" ></span>
+                <br>
+                <label for="bedType">Bed Type: </label>
+                <span id="bedType" ></span>
+                <br>
+                <label for="EarlyIn">Early Check-in: </label>
+                <span id="EarlyIn" ></span>
+                <br>
+            </Fieldset>
+            <div>
+                <input type="submit" id="buttonBack" value="Back">
+            </div>
+        </form>
+    </main>
+    <script src="ShowReservation.js"></script>
+</body>
+</html>

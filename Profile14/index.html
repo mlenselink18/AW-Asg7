@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile-14</title>
+    <link rel="stylesheet" href="../styles/slicknav.css">
+    <link href="../styles/profile.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+        });
+    </script>
+</head>
+<header>
+    <h1>Account Verify Profile-14</h1>
+</header>
+<nav id="mobile_menu"></nav>
+<nav id="nav_menu">
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Profile14/index.html">Profile-14</a></li>
+        <li><a href="../Reservations/index.html">Reservations</a></li>
+    </ul>
+</nav>
+<br>
+<body>
+    <main> 
+        <form action="profile.html" class="inputForm" id="ProfileForm" method="GET">
+            <table>
+                <tr>
+                    <td class="label">
+                        <span for="Email">Email: </span>
+                    </td>
+                    <td class="input">
+                        <input type="text" name="Email" id="Email" maxlength="150" required>
+                        <span class="req"></span>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label for="Phone">Phone: </label>
+                    </td>
+                    <td class="input">
+                        <input type="text" name="Phone" id="Phone" placeholder="999-999-9999" maxlength="12" required>
+                        <span class="req"></span>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label for="Zip">Zip Code: </label>
+                    </td>
+                    <td class="input">
+                        <input type="text" name="Zip" id="Zip" maxlength="10" required>
+                        <span class="req"></span>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+            <div class="input">
+                <input type="submit" id="buttonSave" value="Save">
+            </div>
+        </form>
+    </main>
+    <script src="Profile.js"></script>
+</body>
+</html>
